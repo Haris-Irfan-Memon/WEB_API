@@ -8,7 +8,7 @@ namespace PokemonReviewApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OwnerController : Controller
+    public class OwnerController :Controller
     {
         private readonly IOwnerRepository _ownerRepository;
         private readonly ICountryRepository _countryRepository;

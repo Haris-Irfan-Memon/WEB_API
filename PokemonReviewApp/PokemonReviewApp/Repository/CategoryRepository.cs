@@ -4,7 +4,7 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Repository
 {
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository :ICategoryRepository
     {
         private DataContext _context;
         public CategoryRepository(DataContext context)

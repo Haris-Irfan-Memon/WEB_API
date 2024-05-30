@@ -5,7 +5,7 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Repository
 {
-    public class CountryRepository : ICountryRepository
+    public class CountryRepository:ICountryRepository
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;

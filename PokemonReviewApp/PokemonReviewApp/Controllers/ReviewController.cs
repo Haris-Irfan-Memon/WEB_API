@@ -4,10 +4,9 @@ using PokemonReviewApp.Dto;
 using PokemonReviewApp.Interfaces;
 using PokemonReviewApp.Models;
 
+
 namespace PokemonReviewApp.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class ReviewController : Controller
     {
         private readonly IReviewRepository _reviewRepository;
@@ -27,7 +26,7 @@ namespace PokemonReviewApp.Controllers
         }
 
         [HttpGet]
-        [ProducesResponseType(200, Type = typeof(IEnumerable<Review>))]
+        [ProducesResponseType(200, Type = typeof(IEnumerable<ReviewController>))]
         public IActionResult GetReviews()
         {
             var reviews = _mapper.Map<List<ReviewDto>>(_reviewRepository.GetReviews());
@@ -39,7 +38,7 @@ namespace PokemonReviewApp.Controllers
         }
 
         [HttpGet("{reviewId}")]
-        [ProducesResponseType(200, Type = typeof(Review))]
+        [ProducesResponseType(200, Type = typeof(ReviewController))]
         [ProducesResponseType(400)]
         public IActionResult GetPokemon(int reviewId)
         {
@@ -55,7 +54,7 @@ namespace PokemonReviewApp.Controllers
         }
 
         [HttpGet("pokemon/{pokeId}")]
-        [ProducesResponseType(200, Type = typeof(Review))]
+        [ProducesResponseType(200, Type = typeof(ReviewController))]
         [ProducesResponseType(400)]
         public IActionResult GetReviewsForAPokemon(int pokeId)
         {
@@ -177,6 +176,5 @@ namespace PokemonReviewApp.Controllers
             }
             return NoContent();
         }
-
     }
 }

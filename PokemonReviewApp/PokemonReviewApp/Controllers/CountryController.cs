@@ -6,9 +6,10 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
-    public class CountryController : Controller
+    public class CountryController: Controller
     {
         private readonly ICountryRepository _countryRepository;
         private readonly IMapper _mapper;

@@ -5,7 +5,7 @@ using PokemonReviewApp.Models;
 
 namespace PokemonReviewApp.Repository
 {
-    public class ReviewRepository : IReviewRepository
+    public class ReviewRepository :IReviewRepository
     {
         private readonly DataContext _context;
         private readonly IMapper _mapper;
